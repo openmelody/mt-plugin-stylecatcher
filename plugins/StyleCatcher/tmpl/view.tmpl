@@ -1,7 +1,7 @@
 <mt:setvarblock name="page_title"><__trans phrase="Select a Style"></mt:setvarblock>
 <mt:setvarblock name="html_head" append="1">
 <!-- stylecatcher -->
-<link rel="stylesheet" type="text/css" title="Default Layout" href="<mt:var name="plugin_static_uri">templates.css" />
+<link rel="stylesheet" type="text/css" title="Default Layout" href="<mt:PluginStaticWebPath component="StyleCatcher">templates.css" />
 
 <script type="text/javascript" src="<mt:var name="static_uri">js/tc/mixer.js"></script>
 <script type="text/javascript" src="<mt:var name="static_uri">js/tc/mixer/tagmatch.js"></script>
@@ -12,7 +12,7 @@
 
 <script type="text/javascript">
 /* <![CDATA[ */
-    var repoImg = "<mt:var name="plugin_static_uri">images/mixed-media.gif";
+    var repoImg = "<mt:PluginStaticWebPath component="StyleCatcher">images/mixed-media.gif";
     var selected;
     var blog_id = '<mt:var name="blog_id" escape="js">';
     var dynamic_blog = <mt:if name="dynamic_blog">true<mt:else>false</mt:if>;
@@ -400,7 +400,7 @@
         //   #1: new scrollbox under id 'categories'
         /*
                 <div class="category" id="category-repo" title="Remote Styles" style="display: none">
-                    <img src="<mt:var name="plugin_static_uri">images/mixed-media.gif" alt="" /><span id="repo-name">Remote Styles</span>
+                    <img src="<mt:PluginStaticWebPath component="StyleCatcher">images/mixed-media.gif" alt="" /><span id="repo-name">Remote Styles</span>
                 </div>
         */
         var cats = getByID("categories");
@@ -542,16 +542,16 @@
         </h2>
 
         <div class="scrollbox" id="categories">
-            <div class="category" id="category-current" title="<__trans phrase="Current theme for your weblog">" style="display: none"><img src="<mt:var name="plugin_static_uri">images/top-rated.gif" alt="Your Current Style" /><span><__trans phrase="Current Style"></span>
+            <div class="category" id="category-current" title="<__trans phrase="Current theme for your weblog">" style="display: none"><img src="<mt:PluginStaticWebPath component="StyleCatcher">images/top-rated.gif" alt="Your Current Style" /><span><__trans phrase="Current Style"></span>
             </div>
-            <div class="category" id="category-my-designs" title="<__trans phrase="Locally saved themes">" style="display: none"><img src="<mt:var name="plugin_static_uri">images/my-designs.gif" alt="my-designs" /><span><__trans phrase="Saved Styles"></span>
+            <div class="category" id="category-my-designs" title="<__trans phrase="Locally saved themes">" style="display: none"><img src="<mt:PluginStaticWebPath component="StyleCatcher">images/my-designs.gif" alt="my-designs" /><span><__trans phrase="Saved Styles"></span>
             </div>
-            <div class="category" id="category-mt-designs" title="<__trans phrase="Default Styles">" style="display: none"><img src="<mt:var name="plugin_static_uri">images/gear.gif" alt="mt-designs" /><span><__trans phrase="Default Styles"></span>
+            <div class="category" id="category-mt-designs" title="<__trans phrase="Default Styles">" style="display: none"><img src="<mt:PluginStaticWebPath component="StyleCatcher">images/gear.gif" alt="mt-designs" /><span><__trans phrase="Default Styles"></span>
             </div>
-            <div class="category" id="category-more" title="<__trans phrase="Single themes from the web">" style="display: none"><img src="<mt:var name="plugin_static_uri">images/featured.gif" alt="my-designs" /><span><__trans phrase="More Styles"></span>
+            <div class="category" id="category-more" title="<__trans phrase="Single themes from the web">" style="display: none"><img src="<mt:PluginStaticWebPath component="StyleCatcher">images/featured.gif" alt="my-designs" /><span><__trans phrase="More Styles"></span>
             </div>
             <mt:loop name="style_library">
-            <div class="category" id="category-repo-<mt:var name="key">" title="<mt:var name="description_label" escape="html">"><img src="<mt:var name="plugin_static_uri">images/featured.gif" alt="more-designs" /><span><mt:var name="label" escape="html"></span>
+            <div class="category" id="category-repo-<mt:var name="key">" title="<mt:var name="description_label" escape="html">"><img src="<mt:PluginStaticWebPath component="StyleCatcher">images/featured.gif" alt="more-designs" /><span><mt:var name="label" escape="html"></span>
             </div>
             </mt:loop>
         </div>
